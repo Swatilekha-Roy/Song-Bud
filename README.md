@@ -1,2 +1,9 @@
-# Listen-in
-A listening room where users can listen to different music in different rooms, in sync.
+# chatcord
+
+Simple chat room using socket.io
+
+Inspired by Traversy Media 
+
+## Additional features added
+
+- Unique user detection to prevent duplicate user names
