@@ -21,6 +21,7 @@ const botName = 'Chat Bot';
 
 // Run when client connects
 io.on('connection', (socket) => {
+
   // check user is unique
   socket.on('newUser', (username) => {
     if (!uniqueUser(username)) {
@@ -33,11 +34,12 @@ io.on('connection', (socket) => {
     }
   });
 
+
   socket.on('joinRoom', ({ username, room }) => {
     const user = userJoin(socket.id, username, room);
     socket.join(user.room);
     // Welcome current user
-    socket.emit('message', formatMessage(botName, 'Welcome to Chat!'));
+    socket.emit('play', formatMessage(botName, 'Welcome to Chat!'));
 
     // Broadcast to all connections except the current connection joining
     socket.broadcast
