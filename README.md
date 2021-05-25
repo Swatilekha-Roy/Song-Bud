@@ -4,4 +4,4 @@ A web chat application using socket.io using which different users can select a 
 
 
 ## Demo Link
-https://rhyth-mind.herokuapp.com/
+https://ryth-mind.herokuapp.com/
